@@ -27,14 +27,14 @@ Spec anatomy
   * `expect(a).to match b` means `a =~ b`
   * `expect(a).to include be` means `a.include?(b)`
 - [x] `pending`
-- [ ] `spec_helper`
-- [ ] `let` blocks
-- [ ] helper methods
+- [x] `spec_helper`
+- [x] `let` blocks
+- [x] helper methods
 
 Flags
 -----
 
 * [x] `--color` or `-c`
 * [x] `--format documentation` or `-f d`
-* [x] `--fail_fast` stops testing after the first failure
-* [ ] `--tag tagname`
+* [x] `--fail-fast` stops testing after the first failure
+* [x] `--tag tagname`

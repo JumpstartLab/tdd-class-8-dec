@@ -1,11 +1,13 @@
-require 'cup'
+require 'spec_helper'
 
 # this defines a suite named "Cup"
 # a suite is a group of related tests
 RSpec.describe 'Cup' do
+  let(:color) { :brown }
+
   it 'has a color' do
-    cup = Cup.new :brown
-    expect(cup.color).to eq :brown
+    cup = Cup.new color
+    expect(cup.color).to eq color
     # Break down that syntax
     #   self.expect(cup.color()).to(self.eq(:brown))
     #   eq means `==` returns true
@@ -13,7 +15,7 @@ RSpec.describe 'Cup' do
     #   cup.color.should == :brown
   end
 
-  example 'look at other matchers' do
+  example 'look at other matchers', a: true do
     expect("a").to eq "a"
     expect("abc").to match /a.c/
     expect(["a", "b", "c"]).to include "b"
