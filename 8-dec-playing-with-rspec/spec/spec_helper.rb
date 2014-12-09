@@ -1,3 +1,6 @@
+require 'simplecov'
+SimpleCov.start
+
 require 'cup'
 
 RSpec.configure do |c|

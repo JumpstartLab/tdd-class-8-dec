@@ -10,4 +10,8 @@ class Cup
   def ==(cup)
     color == cup.color
   end
+
+  def uncovered
+    1
+  end
 end
