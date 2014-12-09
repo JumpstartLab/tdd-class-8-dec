@@ -56,7 +56,7 @@ Tuesday
 
 ### Afternoon
 
-* questions
+* Questions
   * figure out what profiling stuff we can use
     * http://tutorials.jumpstartlab.com/topics/performance/queries.html   | how to optimize
     * http://tutorials.jumpstartlab.com/topics/performance/measuring.html | finding places to optimize
@@ -65,9 +65,9 @@ Tuesday
   * Can we get a "whitewashed" test from the word document? (then can try turning that into a spec)
   * Why did they want to learn mocking? (Third party APIs)
 * `s_arb` Seeing is Believing snippet
-* Contact Manager
-  * Bring RSpec into a Rails environment
-  * Simplecov
+* [Contact Manager](http://tutorials.jumpstartlab.com/projects/contact_manager.html)
+  * Purpose: Bring RSpec into a Rails environment
+  * [Simplecov](http://tutorials.jumpstartlab.com/topics/internal_testing/code_coverage.html)
 
 
 
@@ -95,19 +95,20 @@ We'll work in a repository called [Storedom](https://github.com/turingschool-exa
 ### Morning
 
 * Acceptance testing conversation (find this tut)
-Discuss how CI works, add our repo to Travis, see it running
-do it together on first feature from https://github.com/turingschool/assessment_challenges/blob/master/storedom.markdown
+* Discuss how CI works, add our repo to Travis, see it running
+* Do it together on first feature from https://github.com/turingschool/assessment_challenges/blob/master/storedom.markdown
 
 Afternoon
-  How does day to day process change with test suite
-  work independently and try this stuff
-  Profiling stuff if we have time
+
+* How does day to day process change with test suite
+* work independently and try this stuff
+* Profiling stuff if we have time
 
 
 Friday
 ------
 
-* Performancy stuff based on Tuesday's conversatino
+* Performancy stuff based on Tuesday's conversation
 * VCR?
 * Patterns for developing Rails clients?
 * More focused discussion of mocking and stubbing?

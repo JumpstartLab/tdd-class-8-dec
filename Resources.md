@@ -13,3 +13,5 @@ Resources
 * For helping new devs on the team get up to speed
   * Learn the basics with Ruby Kickstart (my material): [Material](https://github.com/JoshCheek/ruby-kickstart) and [videos](https://vimeo.com/channels/844657)
   * [Eloquent Ruby](http://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104) -- recommended by Jeff
+* Software tools to get approved
+  * Gems are fine
