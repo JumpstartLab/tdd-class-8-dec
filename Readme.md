@@ -10,12 +10,12 @@ Monday
 
 * Get settled in, make sure everything is installed and working (Ruby, Rails, RSpec, SeeingIsBelieving, internet)
 * Figure out what we need to accomplish for the class to be a success
-* Discuss how Ruby works (Object Model)
+* Really get to know Ruby by exploring the [Object Model](https://github.com/JumpstartLab/tdd-class-8-dec/blob/master/8-dec-object-model.rb)
 
 ### Afternoon
 
 * Finish Object Model
-* Most common RSpec syntax
+* Intro to [RSpec](https://github.com/JumpstartLab/tdd-class-8-dec/tree/master/8-dec-playing-with-rspec)
 
 
 
