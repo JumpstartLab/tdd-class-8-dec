@@ -83,7 +83,7 @@ I'll have a doctor's appointment, so Jorge will work with you this morning.
 ### Afternoon
 
 * Integration testing with Capybara and Selenium (or Phantom)
-* Look at how we can incorporate that into Contact Manager 
+* Look at how we can incorporate that into Contact Manager
 
 
 
@@ -102,8 +102,8 @@ Afternoon
   How does day to day process change with test suite
   work independently and try this stuff
   Profiling stuff if we have time
- 
- 
+
+
 Friday
 ------
 
