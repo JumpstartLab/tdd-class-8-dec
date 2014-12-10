@@ -54,5 +54,8 @@ ManageMyInventoryDotCom::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match ':controller(/:action(/:id))(.:format)', constraints: Proc.new { |route_params, request|
+    Rails.logger.info "\e[31mDEFAULT LEGACY ROUTE: #{request.method} #{request.path} | #{request.params.inspect}\e[0m"
+    true
+  }
 end
