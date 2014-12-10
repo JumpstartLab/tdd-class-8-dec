@@ -1,29 +1,3 @@
-class Merchant < ActiveRecord::Base
-  has_many :items
-end
-
-class Item < ActiveRecord::Base
-  belongs_to :merchant
-  has_many   :item_to_characteristics
-  has_many   :characteristics, through: :item_to_characteristics
-end
-
-class ItemToCharacteristic < ActiveRecord::Base
-  belongs_to :item
-  belongs_to :characteristic
-end
-
-class CharacteristicType < ActiveRecord::Base
-  has_many :characteristics
-end
-
-class Characteristic < ActiveRecord::Base
-  belongs_to :characteristic_type
-  has_many   :item_to_characteristics
-  has_many   :items, through: :item_to_characteristics
-end
-
-
 color = CharacteristicType.new name: 'color'
 white = Characteristic.new name: 'white', characteristic_type: color
 
