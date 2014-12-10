@@ -1,0 +1,92 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/helpers/items_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/helpers/merchants_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/controllers/items_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/models/item.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/controllers/merchants_controller.rb": [
+        1,
+        1,
+        5,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        2,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/models/merchant.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/models/characteristic.rb": [
+        1,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/models/characteristic_type.rb": [
+        1,
+        null
+      ],
+      "/Users/Jorge/Dropbox/projects/tdd-class-8-dec/9-dec-manage_my_inventory_dot_com/app/models/item_to_characteristic.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1418237682
+  }
+}

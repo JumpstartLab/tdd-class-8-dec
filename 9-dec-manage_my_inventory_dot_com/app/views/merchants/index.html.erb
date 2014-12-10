@@ -1,0 +1,4 @@
+<h1>MyInventory.com</h1>
+<% @merchants.each do |merchant| %>
+  <p><%= merchant.name %> <%= link_to "edit", edit_merchant_path(merchant) %></p>
+<% end %>
