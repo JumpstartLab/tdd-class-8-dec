@@ -48,11 +48,7 @@ Tuesday
     3. remove pain
       * This almost always means "find a way to push the problem up the callstack"
       * There are patterns to accomplish this, once you've identified the problem
-* [Event reporter](http://tutorials.jumpstartlab.com/projects/event_reporter.html)
-  * Start this together, discuss approaches to testing we can take
-  * Use this to get familiar with RSpec
-  * Mocking/Stubbing (File system, in this case)
-  * See how test pain causes us to change the design
+* Discuss how testing and process can be used problems that they actually experience (complex search form / query building / permissions) [results are here](https://github.com/JumpstartLab/tdd-class-8-dec/blob/master/9-dec-search-organization.rb)
 
 ### Afternoon
 
@@ -61,13 +57,22 @@ Tuesday
     * http://tutorials.jumpstartlab.com/topics/performance/queries.html   | how to optimize
     * http://tutorials.jumpstartlab.com/topics/performance/measuring.html | finding places to optimize
     * https://github.com/flyerhzm/bullet                                  | bullet - identify N+1 queries
+  * These are all fine, as long as they are packaged as a gem. Phantom has a gem to package it!
   * figure out how significant it is to bring in Phantom
   * Can we get a "whitewashed" test from the word document? (then can try turning that into a spec)
   * Why did they want to learn mocking? (Third party APIs)
-* `s_arb` Seeing is Believing snippet
-* [Contact Manager](http://tutorials.jumpstartlab.com/projects/contact_manager.html)
+* Go make sure we hit everything we wanted for simple RSpec
+* `s_arb` (might need to have language set to Ruby) Seeing is Believing snippet
+* [Simplecov](http://tutorials.jumpstartlab.com/topics/internal_testing/code_coverage.html)
+* More RSpec
+* Complex search form
+  * Explore the [domain from this morning](https://github.com/JumpstartLab/tdd-class-8-dec/blob/master/9-dec-search-organization.rb) by making up our own project based on it.
   * Purpose: Bring RSpec into a Rails environment
-  * [Simplecov](http://tutorials.jumpstartlab.com/topics/internal_testing/code_coverage.html)
+  * Try applying these ideas to a real-world situation.
+  * Begin planning
+    * Define set of criteria, identify most important ones.
+    * BDD High-level thought ([acceptance tests with Capybara and Phantom](http://tutorials.jumpstartlab.com/topics/capybara/capybara_and_phantom.html))
+    * New Rails App on 3.2.x
 
 
 
@@ -78,13 +83,42 @@ Wednesday
 
 I'll have a doctor's appointment, so Jorge will work with you this morning.
 
-* Continue Contact Manager
+Pick up where we left off on defining manage-my-inventory.com
+
+* Setup
+  * Add [RSpec for Rails](https://github.com/rspec/rspec-rails)
+  * Add [SimpleCov](https://github.com/colszowka/simplecov/)
+  * Move [the schema](https://github.com/JumpstartLab/tdd-class-8-dec/blob/master/9-dec-manage_my_inventory_dot_com/model_sandbox.rb) into a migration
+  * Move each model into its own file
+* Implementing the test
+  * Turn the language in the acceptance tests into feature tests
+    (integration level, this is where your big wins come in on your app, the code coverage number should jump significantly with a small number of these)
+  * We can implementing them using the [Capybara API](https://github.com/jnicklas/capybara#using-capybara-with-rspec)
+  * Use that to get a "tracer bullet" of functionality through the app
+  * Write the feature test with [Capybara + Phantom](http://tutorials.jumpstartlab.com/topics/capybara/capybara_and_phantom.html)
+* Begin implementing the code to make that test pass
+  * Routes / controllers, querying the model, rendering the view
+* Add more requirements
+  * See where this leads to testing low-level things via high-level tests.
+    Instead, we want to extract these into objects.
+    It might wind up following
+    [the discussion we had yesterday morning](https://github.com/JumpstartLab/tdd-class-8-dec/blob/master/9-dec-search-organization.rb)
+  * Analyze where to extract that into an object
+  * Do the extraction (We can put these into a dir in app, e.g. app/interactors or app/use_cases or whatever you want, really -- Rails will pick it up just because it's in that directory)
+  * Add tests that focus more on this module of code, and drive the behaviour from these tests.
+  * Once we have it working, go try it out in the browser and see it work to make the accomplishment concrete!
 
 ### Afternoon
 
-* Integration testing with Capybara and Selenium (or Phantom)
-* Look at how we can incorporate that into Contact Manager
-
+* I found a way to [identify all invocations of the legacy route](https://github.com/JumpstartLab/tdd-class-8-dec/blob/c7966100424bb179064ac05ab395c2f1c0d3e9f7/9-dec-manage_my_inventory_dot_com/config/routes.rb#L57-60), we can take a look at that.
+* Continuing with the information from yesterday
+* We're looking at:
+  * How to use Capybara to traverse traverse our site for our specs
+  * How the high-level test covers a wide breadth of components, but without much depth
+  * How that gives us the confidence that everything still works, but is ill-suited for focused tests on individual components.
+  * How we can then extract objects out of this high-level workflow as they become apparent, and then use more focused unit tests on those objects to make sure we believe they work correctly.
+  * That the tests allow us to do refactorings without worrying that we broke the code.
+  * That when tests become difficult, we find the problematic dependency and find a way to push it back up to the caller (which is probably the controller in this case)
 
 
 Thursday
