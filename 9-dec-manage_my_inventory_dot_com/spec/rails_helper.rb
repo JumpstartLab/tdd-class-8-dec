@@ -12,6 +12,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end
@@ -50,4 +51,21 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+end
+
+
+FactoryGirl.define do
+  factory :merchant do
+    name     "Abbicus"
+    tier     1
+    location "CO"
+  end
+
+  factory :item do
+    name         'This is the name'
+    description  'This is the description'
+    price        10_00
+    merchant_id  1
+    receive_date Date.today
+  end
 end

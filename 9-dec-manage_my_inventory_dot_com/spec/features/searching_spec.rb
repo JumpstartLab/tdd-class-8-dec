@@ -1,21 +1,5 @@
 require "rails_helper"
 
-FactoryGirl.define do
-  factory :merchant do
-    name     "Abbicus"
-    tier     1
-    location "CO"
-  end
-
-  factory :item do
-    name         'This is the name'
-    description  'This is the description'
-    price        10_00
-    merchant_id  1
-    receive_date Date.today
-  end
-end
-
 
 RSpec.describe "Searching", type: :feature do
   def color_characteristic_type
@@ -43,6 +27,11 @@ RSpec.describe "Searching", type: :feature do
     )
   end
 
+  def login_as(merchant)
+    allow_any_instance_of(ApplicationController)
+      .to receive(:current_merchant).and_return(merchant)
+  end
+
   it "I can search by an characteristic" do
     # As a Neyeke tennis shoe vendor
     # I want to search my items
@@ -65,6 +54,8 @@ RSpec.describe "Searching", type: :feature do
       merchant.items = shoes
     end
     login_as neyeke
+
+    pending 'got this far'
 
     # And the RebaK vendor has 1 white shoes
     rebas_shoe = nil
