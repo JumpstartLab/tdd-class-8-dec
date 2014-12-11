@@ -1,6 +1,10 @@
 require "rails_helper"
 
 RSpec.describe "User Feature", type: :feature do
+  before do
+    login_as Merchant.new
+  end
+
   it "can see all merchants in merchants page" do
     Merchant.create(name: "Jorge", location: "Denver", tier: 1)
     Merchant.create(name: "John", location: "New York", tier: 1)
