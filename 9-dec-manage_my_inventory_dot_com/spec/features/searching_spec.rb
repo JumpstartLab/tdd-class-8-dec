@@ -50,12 +50,10 @@ RSpec.describe "Searching", type: :feature do
     end
     login_as neyeke
 
-    pending 'got this far'
-
-    # And the RebaK vendor has 1 white shoes
+    # And the RebaK vendor has 1 white shoe
     rebas_shoe = nil
     rekak = Merchant.create(FactoryGirl.attributes_for :merchant, name: 'rebak') do |merchant|
-      rebas_shoe = FactoryGirl.build(:item, name: 'rebas white shoe', characteristics: [white]),
+      rebas_shoe = FactoryGirl.build(:item, name: 'rebas white shoe', characteristics: [white])
       merchant.items = [rebas_shoe]
     end
 
@@ -63,7 +61,7 @@ RSpec.describe "Searching", type: :feature do
     visit search_path
 
     # When I select "white" from the "colors" filter
-    select 'White', from: 'Colors'
+    select 'white', from: 'Color'
 
     # And I click the "Search" button
     click_button 'Search'

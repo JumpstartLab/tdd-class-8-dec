@@ -1,0 +1,6 @@
+<%= form_for @item_search, url: search_path do |f| %>
+  <%= f.label  :color %>
+  <%= f.select :color, @item_search.color_select %>
+
+  <%= f.submit 'Search' %>
+<% end %>

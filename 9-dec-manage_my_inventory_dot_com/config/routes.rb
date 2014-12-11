@@ -50,6 +50,8 @@ ManageMyInventoryDotCom::Application.routes.draw do
   # just remember to delete public/index.html.
   resources :merchants
 
+  get '/search' => 'items#search', as: :search # search_path, search_url
+
   root to: 'merchants#index'
 
   # See how all your routes lay out with "rake routes"
