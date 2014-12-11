@@ -7,8 +7,8 @@ SimpleCov.start do
   add_filter "/config/"
 end
 
-# require 'capybara/poltergeist'
-# Capybara.default_driver = :poltergeist
+require 'capybara/poltergeist'
+Capybara.default_driver = :poltergeist
 
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
@@ -39,6 +39,19 @@ end
 # require only the support files necessary.
 #
 # Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
+
+
+# Forces all threads to share the same connection. This works on
+# Capybara because it starts the web server in a thread.
+# Taken from http://blog.plataformatec.com.br/2011/12/three-tips-to-improve-the-performance-of-your-test-suite/
+# It's scary... I know
+class ActiveRecord::Base
+  mattr_accessor :shared_connection
+  @@shared_connection = nil
+  def self.connection() @@shared_connection || retrieve_connection end
+  self.shared_connection = ActiveRecord::Base.connection
+end
+
 
 RSpec.configure do |config|
   config.include TestHelpers
