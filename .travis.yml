@@ -1,0 +1,3 @@
+gemfile:
+  - 9-dec-manage_my_inventory_dot_com/Gemfile
+script: cd 9-dec-manage_my_inventory_dot_com && bundle exec rake db:create db:migrate db:seed db:test:prepare spec

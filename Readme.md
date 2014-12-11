@@ -155,9 +155,6 @@ We'll work in a repository called [Storedom](https://github.com/turingschool-exa
   * extract the presenter (pick a name together)
   * extract helper methods
   * extract support code from spec helper
-* Gems
-  * Faker http://rubygems.org/gems/faker
-  * FactoryGirl
 
 
 Friday
