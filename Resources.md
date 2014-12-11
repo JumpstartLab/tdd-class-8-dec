@@ -19,13 +19,23 @@ Resources
       seeing intermediate values, and quickly iterating through a handful of different possibilities and changes.
     * `s_arb` is a snippet you can use from SeeingIsBelieving to get an `ActiveRecord::Base` environment, and then quickly change the migrations,
       the models, and play with the associations, queries, validations, and anything else ActiveRecord related.
+  * Learning Ruby
+    * Learn the basics with Ruby Kickstart (my material, the RSpec files are out of date, but I'm ~70% through updating them): [Material](https://github.com/JoshCheek/ruby-kickstart) and [videos](https://vimeo.com/channels/844657)
+    * [Eloquent Ruby](http://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104) -- recommended by Jeff
+* Gems
+  * [RSpec](https://www.relishapp.com/rspec/) - Testing library
+  * [Faker](https://github.com/stympy/faker) - Generate fake data (names, addresses, phone numbers, etc)
+  * [FactoryGirl](https://github.com/thoughtbot/factory_girl/wiki) - Easily build resources
+  * [Presenters](??) TODO - FIND GOOD RESOURCE
 * Tools
   * [iTerm2](http://iterm2.com/downloads.html)
+  * [ag](https://github.com/ggreer/the_silver_searcher) -- search lots of files fast (with regexes)
   * In general, there's a list of tools I use frequently in my [debugging lecture notes](http://tutorials.jumpstartlab.com/topics/debugging/debugging.html#tools).
-* For helping new devs on the team get up to speed
-  * Learn the basics with Ruby Kickstart (my material, the RSpec files are out of date, but I'm ~70% through updating them): [Material](https://github.com/JoshCheek/ruby-kickstart) and [videos](https://vimeo.com/channels/844657)
-  * [Eloquent Ruby](http://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104) -- recommended by Jeff
 * Software tools to get approved
   * Gems are fine
   * Phantom (note that there is a packaging of this as a gem)
   * Private Travis CI (b/c it's ultra-simple to work with, we don't need a Jenkins expert, don't need to host)
+* Other
+  * [Working Effectively with Legacy Code](http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052)
+  * [My bash_profile](https://github.com/JoshCheek/dotfiles/blob/master/bash_profile) Prompt info is towards the bottom.
+  * [Encryption and such](https://www.youtube.com/watch?v=vgTtHV04xRI)
