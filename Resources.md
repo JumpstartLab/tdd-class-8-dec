@@ -27,6 +27,7 @@ Resources
   * [Faker](https://github.com/stympy/faker) - Generate fake data (names, addresses, phone numbers, etc)
   * [FactoryGirl](https://github.com/thoughtbot/factory_girl/wiki) - Easily build resources
   * [Presenters](??) TODO - FIND GOOD RESOURCE
+  * [Capybara](https://github.com/jnicklas/capybara) - Interface to traverse web pages and assert about content, structure, etc.
 * Tools
   * [iTerm2](http://iterm2.com/downloads.html)
   * [ag](https://github.com/ggreer/the_silver_searcher) -- search lots of files fast (with regexes)
