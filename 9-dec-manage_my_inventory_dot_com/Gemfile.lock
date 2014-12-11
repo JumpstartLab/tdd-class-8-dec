@@ -166,6 +166,7 @@ DEPENDENCIES
   poltergeist
   pry
   rails (= 3.2.21)
+  rake
   rspec-rails (~> 3.0)
   sass-rails (~> 3.2.3)
   simplecov
