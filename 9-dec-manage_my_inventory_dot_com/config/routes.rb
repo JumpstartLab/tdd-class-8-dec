@@ -1,6 +1,8 @@
 ManageMyInventoryDotCom::Application.routes.draw do
   resources :merchants
-  get '/search' => 'items#search', as: :search # search_path, search_url
+  get  '/search' => 'items#search',  as: :search # search_path, search_url
+  post '/search' => 'items#results'
+
   root to: 'merchants#index'
 
   match ':controller(/:action(/:id))(.:format)', constraints: Proc.new { |route_params, request|

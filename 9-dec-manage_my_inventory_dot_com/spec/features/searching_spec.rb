@@ -27,7 +27,7 @@ RSpec.describe "Searching", type: :feature do
     )
   end
 
-  it "I can search by an characteristic", a:true do
+  it "I can search by an characteristic" do
     # As a Neyeke tennis shoe vendor
     # I want to search my items
     # to determine whether my supply is low or high
