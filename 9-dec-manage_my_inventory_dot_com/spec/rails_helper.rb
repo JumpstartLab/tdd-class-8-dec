@@ -7,6 +7,9 @@ SimpleCov.start do
   add_filter "/config/"
 end
 
+# require 'capybara/poltergeist'
+# Capybara.default_driver = :poltergeist
+
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
