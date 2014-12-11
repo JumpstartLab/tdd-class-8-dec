@@ -2,32 +2,7 @@ require "rails_helper"
 
 
 RSpec.describe "Searching", type: :feature do
-  def color_characteristic_type
-    @color_characteristic_type ||= (
-      CharacteristicType.where(name: 'color').first ||
-        CharacteristicType.create!(name: 'color')
-    )
-  end
-  def white
-    @white ||= (
-      Characteristic.where(name: 'white', characteristic_type_id: color_characteristic_type.id).first ||
-        Characteristic.create!(name: 'white', characteristic_type_id: color_characteristic_type.id)
-    )
-  end
-  def brown
-    @brown ||= (
-      Characteristic.where(name: 'brown', characteristic_type_id: color_characteristic_type.id).first ||
-        Characteristic.create!(name: 'brown', characteristic_type_id: color_characteristic_type.id)
-    )
-  end
-  def black
-    @black ||= (
-      Characteristic.where(name: 'black', characteristic_type_id: color_characteristic_type.id).first ||
-        Characteristic.create!(name: 'black', characteristic_type_id: color_characteristic_type.id)
-    )
-  end
-
-  it "I can search by an characteristic" do
+  it "I can search by an characteristic", a:true do
     # As a Neyeke tennis shoe vendor
     # I want to search my items
     # to determine whether my supply is low or high
