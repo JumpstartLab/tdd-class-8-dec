@@ -27,12 +27,7 @@ RSpec.describe "Searching", type: :feature do
     )
   end
 
-  def login_as(merchant)
-    allow_any_instance_of(ApplicationController)
-      .to receive(:current_merchant).and_return(merchant)
-  end
-
-  it "I can search by an characteristic" do
+  it "I can search by an characteristic", a:true do
     # As a Neyeke tennis shoe vendor
     # I want to search my items
     # to determine whether my supply is low or high
