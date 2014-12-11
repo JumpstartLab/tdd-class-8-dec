@@ -111,12 +111,18 @@ Pick up where we left off on defining manage-my-inventory.com
 ### Afternoon
 
 * I found a way to [identify all invocations of the legacy route](https://github.com/JumpstartLab/tdd-class-8-dec/blob/c7966100424bb179064ac05ab395c2f1c0d3e9f7/9-dec-manage_my_inventory_dot_com/config/routes.rb#L57-60), we can take a look at that.
+* Coverage in gitignore
+* Legacy Code thing
+* Turn our feature into a test
 * Continuing with the information from yesterday
+* Put on one of your repos so you can push back and forth
 * We're looking at:
   * How to use Capybara to traverse traverse our site for our specs
   * How the high-level test covers a wide breadth of components, but without much depth
-  * How that gives us the confidence that everything still works, but is ill-suited for focused tests on individual components.
-  * How we can then extract objects out of this high-level workflow as they become apparent, and then use more focused unit tests on those objects to make sure we believe they work correctly.
+  * How that gives us the confidence that everything still works,
+    but is ill-suited for focused tests on individual components.
+  * How we can then extract objects out of this high-level workflow as they become apparent,
+    and then use more focused unit tests on those objects to make sure we believe they work correctly.
   * That the tests allow us to do refactorings without worrying that we broke the code.
   * That when tests become difficult, we find the problematic dependency and find a way to push it back up to the caller (which is probably the controller in this case)
 
@@ -128,21 +134,37 @@ We'll work in a repository called [Storedom](https://github.com/turingschool-exa
 
 ### Morning
 
-* Acceptance testing conversation (find this tut)
-* Discuss how CI works, add our repo to Travis, see it running
-* Do it together on first feature from https://github.com/turingschool/assessment_challenges/blob/master/storedom.markdown
+* Continuing with yesterday's work
+* Extract the `login_as` helper into a module, and include it in the RSpec configuration
+* Fix the tests that authentication broke using an RSpec `before` filter
+* Finish current story
 
-Afternoon
+### Afternoon
 
-* How does day to day process change with test suite
-* work independently and try this stuff
-* Profiling stuff if we have time
+* To Add
+  * Phantom
+  * Add CI
+* Get into the workflow
+  * Move to one of your repos
+  * Pick two new features to work on, I'll pair with you.
+  * We'll discuss the day-to-day changes to your routine
+  * Work on each of these independently
+  * Work independently and try this stuff - I can also pair for periods at a time
+* Refactorings
+  * Extract Search into its own resource
+  * extract the presenter (pick a name together)
+  * extract helper methods
+  * extract support code from spec helper
+* Gems
+  * Faker http://rubygems.org/gems/faker
+  * FactoryGirl
 
 
 Friday
 ------
 
-* Performancy stuff based on Tuesday's conversation
+* Performance stuff based on Tuesday's conversation
 * VCR?
 * Patterns for developing Rails clients?
 * More focused discussion of mocking and stubbing?
+* Recap
