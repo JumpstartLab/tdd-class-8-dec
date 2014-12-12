@@ -26,7 +26,7 @@ Resources
   * [RSpec](https://www.relishapp.com/rspec/) - Testing library
   * [Faker](https://github.com/stympy/faker) - Generate fake data (names, addresses, phone numbers, etc)
   * [FactoryGirl](https://github.com/thoughtbot/factory_girl/wiki) - Easily build resources
-  * [Presenters](??) TODO - FIND GOOD RESOURCE
+  * [Presenters](http://confreaks.com/videos/2526-lsrc2011-blow-up-your-views) Talk by Jeff, where I first heard about presenters (think this is the talk)
   * [Capybara](https://github.com/jnicklas/capybara) - Interface to traverse web pages and assert about content, structure, etc.
 * Tools
   * [iTerm2](http://iterm2.com/downloads.html)
@@ -36,6 +36,10 @@ Resources
   * Gems are fine
   * Phantom (note that there is a packaging of this as a gem)
   * Private Travis CI (b/c it's ultra-simple to work with, we don't need a Jenkins expert, don't need to host)
+* Performance
+  * [How to Optimize](http://tutorials.jumpstartlab.com/topics/performance/queries.html)
+  * [Finding places to optimize](http://tutorials.jumpstartlab.com/topics/performance/measuring.html)
+  * [https://github.com/flyerhzm/bullet](bullet) identify N+1 queries
 * Other
   * [Working Effectively with Legacy Code](http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052)
   * [My bash_profile](https://github.com/JoshCheek/dotfiles/blob/master/bash_profile) Prompt info is towards the bottom.

@@ -160,12 +160,8 @@ Friday
 
 ### Morning
 
-* Q: More focused discussion of mocking and stubbing this afternoon?
 * Integrate permissions
 * Watch CI
-* One more feature
-  * Specific tests on the presenter
-  * How about one that uses the Permissions in the presenter?
 * Faker - How I learn about a library I don't know
   * SeeingIsBelieving
     * I usually find docs by going to `rubygems.org/gems/<gemname>` and clicking the link to "Homepage" or "Source Code"
@@ -245,14 +241,17 @@ Friday
         there's a pretty decent chance that we can override it from our Rails app's `config/locales/en.yml`
         (I haven't tried this, it just seems likely)
 * Continue with work on the different pieces and exploring 
-
+* One more feature
+  * Specific tests on the presenter
+  * How about one that uses the Permissions in the presenter?
+* Q: More focused discussion of mocking and stubbing this afternoon?
+  * Mocking/stubbing
+  * Performance
+  * manage_my_inventory.com
 
 ### Afternoon
 
-* Performance
-  * http://tutorials.jumpstartlab.com/topics/performance/queries.html   | how to optimize
-  * http://tutorials.jumpstartlab.com/topics/performance/measuring.html | finding places to optimize
-  * https://github.com/flyerhzm/bullet                                  | bullet - identify N+1 queries
+* RSpec Mocks
 * Recap
   * RSpec
   * Object Model
