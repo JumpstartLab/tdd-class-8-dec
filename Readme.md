@@ -281,4 +281,9 @@ Friday
   * Learn about Faker and see how I go about exploring a new library
 * Plan for quick gains
   * Integration tests
-  * How to debug these kind of tests
+  * See progress in SimpleCov
+  * Focus in on units as they become apparent (rather than doing all tests at the integration level of abstraction)
+  * How to debug these kind of tests - pry
+  * If people become frustrated by the failures - focus on:
+    * this isn't changing the fragility of the code, it's changing when we identify the problem
+    * ie when we run the test right after working on the feature, vs in front of a client 2 months later
