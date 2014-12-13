@@ -227,7 +227,7 @@ Friday
       * lets check out the locales `cat locales/en.yml` erm... a bit much, lets parse it `ruby -r yaml -r pp -e 'pp YAML.load(File.read "locales/en.yml")'`
       * Still a bit much. What keys do we have? `pp YAML.load(File.read "locales/en.yml")["en"].keys`
       * Oh, a "faker" key, that sounds a lot like what we gave to `I18n` earlier: `faker.name.first_name`
-        
+
         ```sh
         $ ruby -r yaml -r pp -e 'pp YAML.load(File.read "locales/en.yml").keys'
         $ ruby -r yaml -r pp -e 'pp YAML.load(File.read "locales/en.yml")["en"].keys'
@@ -240,7 +240,7 @@ Friday
       * Cool, so now we see where the data is, how it gets populated, and since it uses `I18n`,
         there's a pretty decent chance that we can override it from our Rails app's `config/locales/en.yml`
         (I haven't tried this, it just seems likely)
-* Continue with work on the different pieces and exploring 
+* Continue with work on the different pieces and exploring
 * One more feature
   * Specific tests on the presenter
   * How about one that uses the Permissions in the presenter?
@@ -280,10 +280,26 @@ Friday
     * More extensible - e.g. could present a form with all the info in it, and run the results through to tell a person what permissions they have
   * Learn about Faker and see how I go about exploring a new library
 * Plan for quick gains
-  * Integration tests
-  * See progress in SimpleCov
+  * Start with integration tests to get large gains in code coverage quickly.
+  * Feel the sense of momentum by using SimpleCov to see covered lines increase.
   * Focus in on units as they become apparent (rather than doing all tests at the integration level of abstraction)
-  * How to debug these kind of tests - pry
-  * If people become frustrated by the failures - focus on:
-    * this isn't changing the fragility of the code, it's changing when we identify the problem
-    * ie when we run the test right after working on the feature, vs in front of a client 2 months later
+  * Goal is to perform unit oriented testing as you work on a given unit, and verify that everything still fits together via the integration tests.
+  * The more focused the unit tests are, the closer your feedback will be to the source of any bugs.
+    But introduce those tests as you work on units, rather than trying to go back and add tests to code which exists without them,
+    because it's just too big of a task to go from 0 to 100, instead just try to increase coverage on the code you work on, as you work on it.
+  * Because the integration tests are doing almost all the coverage, there will be tons of ways for them to break.
+    And since they're so high level, the break might be far from the source of the code.
+    You can pry into the test or a relevant portion of code to get closer to the soruce of the problem and debug it,
+    mitigating the pain of having poor feedback. As your unit tests grow, the need for this tactic will be reduced.
+  * If people become frustrated by the failures, explain that:
+    * This isn't changing the fragility of the code, it's changing when we identify the problem
+    * ie we find it's broken when we run the test right after integrating or working on the feature,
+      vs in front of a client 2 months later, when we look worse and the problem could be anything anywhere.
+  * But, keep in mind that it's perfectly possible and happens often that people write fragile tests (the bug can be in the test, too)
+    * So pay attention to what is causing this fragility (e.g. high-level tests being overly dependent on low-level details like presentation, page layout, details of nuanced inputs/algorithms rather than abstractions they ultimately render)
+    * When you have these pains, try applying my steps.
+      * Maybe it means you need to go lower and test more closely (e.g. don't want to have to build the world and parse html just to check an if statement)
+      * Maybe it means you need to take a problematic dependency and push it higher up the call-stack (let the controller or a service object wire the values into your simpler Ruby objects)
+  * Try to get the team into the habit of always running tests before and after integrating,
+    so they come to value a clean codebase in a believed good state, and don't trash the code for everyone else.
+* It was great having you out, thanks for taking the class!
