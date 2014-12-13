@@ -1,0 +1,44 @@
+Problem: how do we figure out what we can do with the mock?
+  pry into the spec
+    example 'invocation matchers' do
+      book = double 'book'
+      expect(book).to receive(:publish).twice
+      book.publish
+      book.publish
+      require 'pry'
+      binding.pry
+    end
+
+  Use knowledge of Object Model to get objects we want to explore
+    m = receive(:publish)
+    ls -v m
+
+  Look through methods to find interesting things we can do
+  One was called `and_raise`,
+    so we can say `... receive(:publish).and_raise ???`
+
+  Went exploring, looking for that method
+    `show-source m.and_raise`
+    `show-source RSpec::Mocks::Expectations...`
+    weren't getting anywhere, so lets find the code
+
+  We know this comes from rspec-mocks
+    based on the name, we infer `require "rspec/mocks"`
+
+  Where is this lib? `gem which rspec/mocks`
+  Go to that lib `2dir` (or copy/paste the dir and cd there)
+  ag 'def and_raise' # or ack, grep -r
+  opened the file with the definition
+  here, we saw docs with examples of the invocations
+
+---
+
+Bigger process:
+  guess a few times at anything reasonable
+  if guesses don't work out, go exploring
+  Once we found the method, guess again about how to use it
+
+The process of guessing is reaching
+Which gets you better at guessing
+and caches knowledge
+and decreases difficulty in learning new code
