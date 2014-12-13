@@ -32,15 +32,12 @@ Resources
   * [iTerm2](http://iterm2.com/downloads.html)
   * [ag](https://github.com/ggreer/the_silver_searcher) -- search lots of files fast (with regexes)
   * In general, there's a list of tools I use frequently in my [debugging lecture notes](http://tutorials.jumpstartlab.com/topics/debugging/debugging.html#tools).
-  * [2di](https://github.com/JoshCheek/dotfiles/blob/eace0511ebe1351e7d6fca900eec7cfa6b884ed3/bash_profile#L70-89) take me to the directory printed by the last command.
+  * [2dir](https://github.com/JoshCheek/dotfiles/blob/eace0511ebe1351e7d6fca900eec7cfa6b884ed3/bash_profile#L70-89) take me to the directory printed by the last command.
+  * [Phantom](http://phantomjs.org/) Headless (doesn't pop up a GUI) web browser that Capybara can use to navigate our site. Because it's a real browser, it runs JavaScript.
 * Performance
   * [How to Optimize](http://tutorials.jumpstartlab.com/topics/performance/queries.html)
   * [Finding places to optimize](http://tutorials.jumpstartlab.com/topics/performance/measuring.html)
   * [https://github.com/flyerhzm/bullet](bullet) identify N+1 queries
-* Software tools to get approved
-  * Gems are fine
-  * Phantom (note that there is a packaging of this as a gem)
-  * Private Travis CI (b/c it's ultra-simple to work with, we don't need a Jenkins expert, don't need to host)
 * Other
   * [Working Effectively with Legacy Code](http://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052)
   * [My bash_profile](https://github.com/JoshCheek/dotfiles/blob/master/bash_profile) Prompt info is towards the bottom.
