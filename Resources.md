@@ -26,7 +26,12 @@ Resources
   * [RSpec](https://www.relishapp.com/rspec/) - Testing library
   * [Faker](https://github.com/stympy/faker) - Generate fake data (names, addresses, phone numbers, etc)
   * [FactoryGirl](https://github.com/thoughtbot/factory_girl/wiki) - Easily build resources
-  * [Presenters](http://confreaks.com/videos/2526-lsrc2011-blow-up-your-views) Talk by Jeff, where I first heard about presenters (think this is the talk)
+  * Presenters
+    * [Talk by Jeff](http://confreaks.com/videos/2526-lsrc2011-blow-up-your-views) this isn't exactly the one I learned from, it's a slight variant he calls a "decorator". It addresses the same problem in a similar way, but it's an object which wraps another object and adds functionality, where presenters use composition instead. I like the "view-model" name, if people at your work are resistant "why do I need more objects?" maybe use this name, then it's like "it's not new, it's just a model... to help the view"
+    * [Talk by Justin Gordon at RailsConf](https://www.youtube.com/watch?v=bHpVdOzrvkE) Start at 13:10, ignore all advocation of concerns (just delete them), disregard anything DHH says about design (think about how coupled Rails is), he mentions polymorphism to remove if statements... if you have the same if statement over and over, then you probably have two objects (Ben Orenstein has a great talk)
+      * 13:10 he discusses Draper (Jeff's draper gem)
+      * 15:35 he discusses Presenters
+      * 18:50 Service Objects. If you nee to share code, move the shared code into its own object and call it from the two consumers. Also, he talks about validations. If your validations require knowledge about the context in which they are being validated, just accept that they can't ever be right, and trying to have them do this will lead to a lot of pain. I spent days trying to work with the "Rails way" on this one, it's not worth it. Just make an object, init it with the model and any context it needs, and have it set errors onto the model. Took like an hour to write what I needed. Code was a bit longer, but w/e, it was explicit, easy to write, easy to read, sufficiently easy to test, and dramatically easier to get correct (if any of this got difficult, I'd probably have it return the errors rather than setting them, and caller would do the setting)
   * [Capybara](https://github.com/jnicklas/capybara) - Interface to traverse web pages and assert about content, structure, etc.
 * Tools
   * [iTerm2](http://iterm2.com/downloads.html)
