@@ -3,7 +3,7 @@ Resources
 
 * Ruby
   * Object Model
-    * [Peter Cooper's lesson](https://www.youtube.com/watch?v=by5fFOBhtPQ) (very similar to what I teach my students) 
+    * [Peter Cooper's lesson](https://www.youtube.com/watch?v=by5fFOBhtPQ) (very similar to what I teach my students)
     * [My material](https://github.com/JoshCheek/ruby-object-model)
   * Load path / Namespacing / interpreting versions / general naming and file patterns.
     * [Gem patterns](http://guides.rubygems.org/patterns/) this is a really great read.
@@ -48,3 +48,4 @@ Resources
   * [My bash_profile](https://github.com/JoshCheek/dotfiles/blob/master/bash_profile) Prompt info is towards the bottom.
   * [Encryption and such](https://www.youtube.com/watch?v=vgTtHV04xRI)
   * [Git Immersion](http://gitimmersion.com/) my favourite git tutorial
+  * [Git Flowchart](http://justinhileman.info/article/git-pretty/full/) What to do in different situations in git
